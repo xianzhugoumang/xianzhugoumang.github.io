@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hexo</title>
+  
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://xianzhugoumang.github.io/"/>
+  <updated>2019-10-26T11:32:15.093Z</updated>
+  <id>https://xianzhugoumang.github.io/</id>
+  
+  <author>
+    <name>衔烛句芒</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Python语法</title>
+    <link href="https://xianzhugoumang.github.io/2019/07/04/python-ru-men/"/>
+    <id>https://xianzhugoumang.github.io/2019/07/04/python-ru-men/</id>
+    <published>2019-07-04T12:24:58.000Z</published>
+    <updated>2019-10-26T11:32:15.093Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;上次我们介绍了一些基本的正则表达式，今天让我们正式来学习python。  &lt;/p&gt;
+&lt;!-- toc --&gt;
+&lt;p&gt;&lt;strong&gt;简介&lt;/strong&gt;&lt;br&gt;我们先来介绍一位大牛，此人名叫吉多·范罗苏姆（Guido van
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://xianzhugoumang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Pyhton" scheme="https://xianzhugoumang.github.io/tags/Pyhton/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>正则表达式简介</title>
+    <link href="https://xianzhugoumang.github.io/2019/07/04/zheng-ze-biao-da-shi-jian-jie/"/>
+    <id>https://xianzhugoumang.github.io/2019/07/04/zheng-ze-biao-da-shi-jian-jie/</id>
+    <published>2019-07-04T12:24:34.000Z</published>
+    <updated>2019-10-26T11:30:31.607Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;网络爬虫，又被称为网页蜘蛛，网络机器人。他是一种按照一定的规则，自动的抓取万维网信息的程序或者脚本。利用爬虫我们可以从万维网上搜集并抓取我们所需要的网页或者数据，拿到这些数据我们就可以做一些诸如数据分析之类的工作。在现今的互联网时代，无论你从事何种职业，从网络中获取信息都是
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://xianzhugoumang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="python爬虫" scheme="https://xianzhugoumang.github.io/tags/python%E7%88%AC%E8%99%AB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Markdown语法简介</title>
+    <link href="https://xianzhugoumang.github.io/2019/07/03/markdown-yu-fa/"/>
+    <id>https://xianzhugoumang.github.io/2019/07/03/markdown-yu-fa/</id>
+    <published>2019-07-03T14:32:04.000Z</published>
+    <updated>2019-10-26T11:27:41.767Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;Markdown-命令简介&quot;&gt;&lt;a href=&quot;#Markdown-命令简介&quot; class=&quot;headerlink&quot; title=&quot;Markdown 命令简介&quot;&gt;&lt;/a&gt;&lt;strong&gt;Markdown&lt;/strong&gt;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="技术" scheme="https://xianzhugoumang.github.io/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+    
+      <category term="Markdown" scheme="https://xianzhugoumang.github.io/tags/Markdown/"/>
+    
+  </entry>
+  
+</feed>

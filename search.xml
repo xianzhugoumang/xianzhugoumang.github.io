@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>Python语法</title>
+      <link href="/2019/07/04/python-ru-men/"/>
+      <url>/2019/07/04/python-ru-men/</url>
+      
+        <content type="html"><![CDATA[<p>上次我们介绍了一些基本的正则表达式，今天让我们正式来学习python。  </p><!-- toc --><p><strong>简介</strong><br>我们先来介绍一位大牛，此人名叫吉多·范罗苏姆（Guido van Rossaum),昵称“龟叔”，是荷兰的一位程序员。这个人毕业于阿姆斯特丹大学，取得了数学和计算机硕士学位，后来辗转于各大研究所，于2005年12月加入Google。网上流行着一个段子，吉多·范罗苏姆去Google应聘，只写了三个词”I Wrote Python”(果然彪悍的人生不需要解释哈)<br>话说这个牛人长这样:<br><img src="python%E8%AF%AD%E6%B3%95/guido_photo.jpg" alt="Guido_photo"><br>哈哈，是不是很有喜感。<br>Python起源于他在圣诞节无聊时开发的一个脚本解释程序——ABC,ABC是由Guido参加设计的一种教学语言，但这门语言由于开放性不足并没有广泛应用，为了规避这个不足，Guido结合了Unix shell 和 C的优点，设计了Python。由于Python语言的简洁性、易读性和可扩展性，Python很快被众多开发人员及科研工作者所认可，获得了广泛的应用，并且在这一过程中，广大的开发人员在平时的工作中为其添加了很多<br> 库，覆盖了网络、文件、GUI、数据库、文本等大量内容，利用这些封装好的库文件，我们只需调用其提供的函数便能实现特定的功能。因此，通常要实现同样的功能，用python写的代码往往比其他高级语言要少很多。<br>我们来先学习Python的 <strong>安装</strong>步骤。目前Python比较常用的有两个版本，python2.x和python3.x。这两个版本并不兼容，因为现在python正在朝着3.x版本进化，在进化过程中，大量的针对2.x版本的代码要修改后才能运行，所以，目前还有许多第三方库还暂时无法在3.x上使用。笔者使用的是python最新版本python3.7.3windows 64位版。读者可以根据自己计算机的配置去<a href="https://www.python.org/downloads/release/python-340" target="_blank" rel="noopener">python官网下载页面</a>上自行选择相应的版本下载   </p><!-- toc --><p><strong>安装</strong><br>下载完成后我们点击安装程序，选择安装位置，默认会安装到C:\users\admin\appdata\local\Python3目录下，然后点击安装。要注意的是安装的时候要勾选<strong>pip</strong>和<strong>Add python.exe to path</strong>，pip是用于管理python安装包的组件，Add python.exe to path表示将python安装路径添加到环境变量中，我们就可以在命令行里面直接通过python开启程序。<br>安装完成后我们打开cmd，输入python，如果看到python的版本信息即为安装成功。如下图所示:<br><img src="python%E8%AF%AD%E6%B3%95/installsuccess.jpg" alt=""><br>若出现“‘python’不是内部或外部命令，也不是可运行的程序或批处理文件”的提示，这个可能是安装时没有勾选Add python.exe to path但实际已经安装完成。若之前已经勾选了该选项，说明是未安装成功，此时重新运行一遍安装程序看看是否能解决问题。  </p><p>当我们编写python代码时，我们得到的是一个包含python代码的以.py为扩展名的文本文件，要运行代码，就需要python解释器去执行.py文件。由于整个Python语言从规范到解释器都是开源的，所以理论上只要水平足够高，任何人都可以编写Python解释七来执行python代码（当然难度很大）。事实上，确实存在多种python解释器:  </p><ul><li><strong>CPython:</strong><br>我们从官网上下载的python3.7.3中已经集成了一个官方版本的解释器:CPython。这个解释器是用C语言开发的，是使用的比较广的一款解释器。  </li><li><strong>PyPy:</strong><br>PyPy是Python开发者为了更好的Hack Python创建的项目，他是用python开发的，比CPython更加灵活、易于使用和实验，执行速度也要比CPython快。绝大部分Python代码都可以在PyPy下运行，但是PyPy和CPython有一些解释规则是不同的，这就导致了相同的代码在两种解释器下执行的结果可能不同。  </li><li><strong>IPython</strong><br>IPython是基于CPython上的一个交互式解释器，也就是说，IPython只是在交互方式上有所增强，但是执行Python代码的功能和CPython是完全一样的。但是增强的交互方式可以使程序运行结果的形式更加丰富多样、直观。我们后期会利用Python对一些经济数据进行分析绘图，在这方面IPython要比CPython更加适用。</li></ul><p>其他还有很多解释器，如Jython（运行在java平台）、IronPython（运行在.net平台上)等等，在此不再一一列举，有兴趣的读者可以自行百度下载研究。  </p><!-- toc --><p><strong>第一个程序</strong><br>是时候动手写程序了，我们第一个要写的程序，理所当然，肯定叫——‘helloworld’，这是一种司空见惯的叫法。其实这种叫法是不是很像你自己创造了一个新的生命,才刚刚打开这个世界的大门一样呢？</p><p>好的，我们现在打开你之前安装目录下的Python.exe程序，命令行输入:</p><pre class=" language-print(&#39;hello,world!&#39;)"><code class="language-print(&#39;hello,world!&#39;)"></code></pre><p>运行结果如下图所示:<br><img src="python%E8%AF%AD%E6%B3%95/helloworld.jpg" alt="helloworld">。<br>好啦，这就是我们第一个程序。是不是觉得这尼玛是什么鬼，就这样的一行语句，就结束了？其实这是因为我们现在使用的是python自带的交互命令行工具，只会给出代码的实时运行结果，代码是无法保存的。要想每次编写的代码能够保存用于下次使用，则要自行下载编辑器然后将文件以.py的形式保存起来。常用的文本编辑器有Sublime_text、NotePad++等（注意不能使用word、记事本之类的编辑器，因为word保存的不是纯文本文件，而记事本会在文件内容前加上UTF-8 BOM等字符，会导致运行结果出现错误）。我们在Sublime_text里面键入刚才的代码，将结果选择一个目录(如:C\mypython)以.py的格式保存，然后在命令行中运行该程序：<br><img src="python%E8%AF%AD%E6%B3%95/helloworld_sublime.jpg" alt="helloworld"><br><img src="Python%E8%AF%AD%E6%B3%95/helloworld_run.jpg" alt="helloworld"> 。<br>有人会有疑问，能不能像运行.exe文件那样运行.py文件呢？答案是不能。.exe是在windows平台上经过编译形成的可执行文件，只能在windows平台上执行，而.py文件是可以在linux和Mac环境下直接和运行的，只需在.py文件的第一行加上:<code>#!/usr/bin/env python</code>,   然后通过命令:  <code>&amp;chomd a+x hello.py</code>即可运行。  </p><p>有了这些编译器后我们可以把每次编写的代码保存下来，下一次就可以直接运行。但是在这里笔者还是推荐大家使用更加专业的IDE(Integrated Development Environment),PyCharm是由JetBrains打造的一款Python IDE，其提供了很多强大的功能，如调试、语法高亮、Project管理、代码跳转、智能提示、单元测试、版本控制等功能。在编写大型程序的时候能够大大提高开发代码的效率。Jetbrains为学生提供了全家桶的免费申请通道，这里是传送门<a href="https://www.jetbrains.com/student/" target="_blank" rel="noopener">jetbrains</a></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Pyhton </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>正则表达式简介</title>
+      <link href="/2019/07/04/zheng-ze-biao-da-shi-jian-jie/"/>
+      <url>/2019/07/04/zheng-ze-biao-da-shi-jian-jie/</url>
+      
+        <content type="html"><![CDATA[<p>网络爬虫，又被称为网页蜘蛛，网络机器人。他是一种按照一定的规则，自动的抓取万维网信息的程序或者脚本。利用爬虫我们可以从万维网上搜集并抓取我们所需要的网页或者数据，拿到这些数据我们就可以做一些诸如数据分析之类的工作。在现今的互联网时代，无论你从事何种职业，从网络中获取信息都是当下比较有效的方法。能利用计算机提高生产效率对于身处信息时代的现代人来讲也是一项十分有必要的技能。<br>爬虫本质上就是存储在计算机上的脚本程序，编写这类程序可以用很多脚本语言，python无疑是这些语言中最被广泛使用的一门语言。我们也将以python为工具，介绍如何编写自己的爬虫程序。在介绍之前，我们先学一学正则表达式。<br>正则表达式又称规则表达式（简写为”regex”)，他通常被用来检索、替换那些符合某个模式（规则）的文本。通过正则表达式，我们可以确定一个字符串是否符合某条过滤逻辑，也可以取出字符串中我们想要的特定部分，许多程序设计语言都支持利用正则表达式进行字符串操作。<br>比如先看下面这条字符串，你觉得我想要匹配的字符串是什么意思？<br>“hadkfalifexxIxxfasdjifija134xxlovexx23345sdfxxyouxx8dfse”<br>面对这么一段毫无头绪的文字 你是不是觉得，哇靠，这么长的一对字母竟然还有别的意思？<br>没错！ 揭晓答案，其实这个正则表达式匹配的是 I love you 三个单词，是不是很有趣呢？<br>正则表达式有很多匹配规则，不同的规则匹配的结果也不同，等学完正则表达式后你就可以用一些正则语法和复杂的文字去考考你的小伙伴了，看看他们能不能猜到你要表达的意思！<br>话不多说，下面我们正式学习正则语法：</p><ol><li>正则表达式常用的符号有：<strong>点号</strong>,<strong>星号</strong>,<strong>问号</strong>与<strong>括号</strong><br>其中，这些符号各自的匹配作用如下:<br>.：匹配任意字符，换行符\n除外<br><em>：匹配前一个字符0次或者无线次<br>？：匹配前一个字符0次或者1次<br>.*：采用贪心算法进行匹配<br>.</em>?：采用非贪心算法进行匹配<br>()：括号内的数据作为结果返回</li><li>正则表达式常用的方法有：<strong>findall()</strong>、<strong>Search()</strong>、<strong>Sub()</strong><br>其中，这些方法各自的匹配规则如下:  <ul><li>findall():匹配所有符合规律的内容，返回包含结果的列表</li><li>Search() :匹配并提取第一个符合规则的内容，返回一个正则表达式对象(object)</li><li>Sub(): 替换符合规则的内容，返回替换后的值 </li></ul></li></ol><p>下面让我们用实际的代码来学习正则表达式（笔者采用的编译器是pycharm）：</p><pre><code> import re//导入re模块 #from re import findall,search,S` secret_code =&#39;hadkfalifexxIxxfasdjifja134xxlovexx23345sdfxxyouxx8dfse&#39;//用于匹配的字符串  </code></pre><pre class=" language-#.的使用举例"><code class="language-#.的使用举例">   a='xz123'   b=re.findall('x.',a)   print(b)</code></pre><p>匹配结果:<br>[‘xz’]    </p><pre class=" language-#*的使用举例"><code class="language-#*的使用举例">   a='xyxy123'   b=re.findall('x*',a)   print(b)</code></pre><p>匹配结果:<br>[‘x’, ‘’, ‘x’, ‘’, ‘’, ‘’, ‘’, ‘’]  </p><pre class=" language-#?的使用举例"><code class="language-#?的使用举例">   a='xy123'   b=re.findall('x?',a)   print(b)</code></pre><p>匹配结果:<br>[‘x’, ‘’, ‘’, ‘’, ‘’, ‘’]    </p><pre class=" language-#.*的使用举例"><code class="language-#.*的使用举例">b=re.findall('xx.*xx',secret_code)//采用贪心算法匹配print(b) </code></pre><p>匹配结果:<br>[‘xxIxxfasdjifja134xxlovexx23345sdfxxyouxx’]  </p><pre class=" language-#.*?的使用举例"><code class="language-#.*?的使用举例">c=re.findall('xx.*?xx',secret_code)//采用非贪心算法匹配print(c)</code></pre><p>匹配结果:<br>[‘xxIxx’, ‘xxlovexx’, ‘xxyouxx’]  </p><pre class=" language-使用括号"><code class="language-使用括号">d=re.findall('xx(.*?)xx',secret_code)print(d)</code></pre><p>匹配结果:<br>[‘I’, ‘love’, ‘you’]</p><p>注意,这种匹配模式都是针对单行的，见下面代码：</p><pre class=" language-s=&#39;&#39;&#39;sdfxxhello"><code class="language-s=&#39;&#39;&#39;sdfxxhello">xxfsdfxxworldxxasdf'''d=re.findall('xx(.*?)xx',s)print(d)</code></pre><p>匹配结果:<br>[‘fsdf’]  </p><p>如需要针对多行查找匹配结果，加上re.S:</p><pre class=" language-s=&#39;&#39;&#39;sdfxxhello"><code class="language-s=&#39;&#39;&#39;sdfxxhello">xxfsdfxxworldxxasdf'''d=re.findall('xx(.*?)xx',s,re.S)print(d)</code></pre><p>匹配结果:<br>[‘hello\n ‘, ‘world’]</p><p>上面的查找都是用的findall(),返回的是符合规则的字符数组。<br>使用search()也可以进行字符的匹配,返回查找结果的一个Match对象，Match对象是一次匹配的结果，包含匹配的很多信息。其包含的属性有:   </p><ul><li>.string:待匹配的文本  </li><li>.re    :匹配时使用的patter对象  </li><li>.pos   :正则表达式搜多文本的开始位置 </li><li>.endpos:正则表达式搜索文本的结束位置<br> 包含的方法有:</li><li>.group() :获得匹配后的字符串</li><li>.start() :匹配字符串在原始字符串的开始位置</li><li>.end()   :匹配字符串在原始字符串的结束位置</li><li>.span()  :返回</li></ul><p>下面是使用search()的一个例子，在group里通过序号确定获取指定的匹配结果,注意序号不能超过元素总和，否则会报错</p><pre><code>#对比findall与search的区别s2=&#39;asdfxxIxx123xxlovexxdfd&#39;f=re.search(&#39;xx(.*?)xx123xx(.*?)xx&#39;,s2).group(2)print(f)f2=re.findall(&#39;xx(.*?)xx123xx(.*?)xx&#39;,s2)print (f2[0][1])</code></pre><p>匹配结果:<br>love<br>love  </p><p>使用sub()可以将目标字符串替换成指定字符串，见下面的例子:  </p><pre><code>s=&#39;123abcssfasdfas123&#39;output=re.sub(&#39;123(.*?)123&#39;,&#39;123789123&#39;,s)print output </code></pre><p>运行结果:<br>123789123</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> python爬虫 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Markdown语法简介</title>
+      <link href="/2019/07/03/markdown-yu-fa/"/>
+      <url>/2019/07/03/markdown-yu-fa/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Markdown-命令简介"><a href="#Markdown-命令简介" class="headerlink" title="Markdown 命令简介"></a><strong>Markdown</strong> 命令简介</h1><hr><p>Markdown 是一种纯文本格式的标记语言，其语法简单，操作方便，通过简单的标记语法，他可以使普通文本内容具备一定的表现格式，因而被广泛用于技术类博客的写作。因为是纯文本，所以只要支持Markdown的地方都能获得一样的编辑效果，可以让作者摆脱排版的困扰，专心写作。下面就让我们来学习其基本的命令。</p><p><strong>一、标题</strong><br>将想要设置为标题的文字前面加#来表示<br>一个#是一级标题，二个#是二级标题，一次类推。最多支持六级标题。<br>示例：<br><img src="https://i.loli.net/2019/07/05/5d1f4eb0ef6c336481.jpg" alt="test1"><br>显示如下:<br><img src="https://i.loli.net/2019/07/05/5d1f4ee8863d285626.jpg" alt="test2"></p><p><strong>二、字体</strong><br>加粗：将想要加粗的文字左右分别用两个*包起来</p><p>斜体：将倾斜的文字左右分别用一个*包起来</p><p>斜体加粗：将需要倾斜且加粗的文字左右分别用三个*包起来</p><p>删除线：将需要删除的文字左右分别用两个~~包起来</p><p>示例：<br><img src="https://i.loli.net/2019/07/05/5d1f6a0bdc59f61018.jpg" alt="test3"><br>显示如下:<br><img src="https://i.loli.net/2019/07/05/5d1f6b4a41b4222388.jpg" alt="test4">  </p><p><strong>三、分割线</strong><br>使用三个或者三个以上的-或*都可以添加分隔线<br>示例：<br><img src="https://i.loli.net/2019/07/05/5d1f6c59d720130496.jpg" alt="test5"><br>显示如下:<br><img src="https://i.loli.net/2019/07/05/5d1f6c6822a2b91850.jpg" alt="test6">  </p><p><strong>四、图片</strong><br>使用图片的语法:<br><code>![图片alt](图片地址 &quot;图片title&quot;)</code><br>示例:<br><code>![baiduicon](https://www.baidu.com/img/bd_logo1.png)</code><br>显示如下:<br><img src="https://www.baidu.com/img/bd_logo1.png" alt="baiduicon"></p><p><strong>五、超链接</strong><br>使用超链接的语法:<br><code>[超链接名](超链接地址 &quot;超链接title&quot;)</code>,其中title可加可不加。<br>示例:<br><code>[简书](http://jianshu.com)</code><br><code>[百度](http://baidu.com)</code><br>显示如下:<br><a href="http://jianshu.com" target="_blank" rel="noopener">简书</a><br><a href="http://baidu.com" target="_blank" rel="noopener">百度</a></p><p>使用超链接也可以使用html语言的a标签代替:<br><code>&lt;a href=&quot;超链接地址&quot; target=&quot;_blank&quot;&gt;超链接名&lt;/a&gt;</code><br>示例:<br><code>&lt;a href=&quot;https://www.jianshu.com/u/1f5ac0cf6a8b&quot; target=&quot;_blank&quot;&gt;简书&lt;/a&gt;</code><br>显示如下:<br><a href="https://www.jianshu.com/u/1f5ac0cf6a8b" target="_blank">简书</a></p><p><strong>六、列表</strong><br>列表可分为无序列表以及有序列表。<br>无序列表用-+*任何一种都可以<br>示例：  </p><ul><li>列表内容  </li></ul><ul><li>列表内容  </li></ul><ul><li>列表内容<br>显示如下:<br><img src="https://i.loli.net/2019/07/06/5d1fffeb7006762882.jpg" alt="test7"></li></ul><p>有序列表使用数字加点的方式来表示<br>示例:  </p><ol><li>列表内容  </li><li>列表内容  </li><li>列表内容<br>显示如下:<br><img src="https://i.loli.net/2019/07/06/5d2000f19156789730.jpg" alt="test8">  </li></ol><p>列表之间可以嵌套<br>在上一级和下一级之间敲三个空格即可<br>示例:  </p><ul><li>一级无序列表内容   <ul><li>二级无序列表内容  </li><li>二级无序列表内容  </li><li>二级无序列表内容   </li></ul></li><li>一级无序列表内容   <ol><li>二级有序列表内容</li><li>二级有序列表内容</li><li>二级有序列表内容</li></ol></li></ul><ol><li>一级有序列表内容   <ul><li>二级无序列表内容</li><li>二级无序列表内容</li><li>二级无序列表内容</li></ul></li><li>一级有序列表内容<ol><li>二级有序列表内容</li><li>二级有序列表内容</li><li>二级有序列表内容</li></ol></li></ol><p><strong>七、表格</strong><br>添加表格的语法如下:<br><code>表头|表头|表头</code><br><code>---|:--:|---:</code><br><code>内容|内容|内容</code><br><code>内容|内容|内容</code><br><code>第二行分割表头和内容,文字默认居中，</code><br>示例:<br><img src="https://i.loli.net/2019/07/06/5d2005ccd6dd667203.jpg" alt="test9"><br>显示如下:<br><img src="https://i.loli.net/2019/07/06/5d200762e064695874.jpg" alt="test10">  </p><table><thead><tr><th>姓名</th><th>技能</th><th>排行</th></tr></thead><tbody><tr><td>刘备</td><td>哭</td><td>大哥</td></tr><tr><td>关羽</td><td>打</td><td>二哥</td></tr><tr><td>张飞</td><td>骂</td><td>三弟</td></tr></tbody></table><p><strong>九、代码</strong><br>添加代码的语法如下:<br>添加单行代码:代码之间分别用一个反引号包起来<br>添加多行代码:代码之间分别用三个反引号包起来，且两边的反引号单独占一行<br>示例：<br><code>这里是单行代码内容</code>  </p><pre><code>     function fun(){                     emp &quot;这是一个非常优秀的程序员&quot;     }     fun();</code></pre><p><strong>十、流程图</strong><br>示例：  </p><blockquote><pre class=" language-flow"><code class="language-flow">st=>start: 开始  op=>operation: My Operationcond=>condition: Yes or No?e=>endst->op->condcond(yes)->econd(no)->op&```</code></pre></blockquote><p>效果如下：   </p><pre class=" language-flow"><code class="language-flow">st=>start: 开始  op=>operation: My Operationcond=>condition: Yes or No?e=>endst->op->condcond(yes)->econd(no)->op</code></pre><p><embed src="//music.163.com/style/swf/widget.swf?sid=28786809&type=2&auto=1&width=320&height=66" width="340" height="86"  allowNetworking="all"></embed></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 技术 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Markdown </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
